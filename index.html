@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crown Solicitors | Premium Legal Services</title>
-    <meta name="description" content="Premium law firm focusing on corporate and private client services in the UK. Strategic and agile legal solutions.">
+    <meta name="description" content="A prestigious law firm in London focusing on corporate and private client services.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,18 +18,18 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header (Glassmorphism) -->
     <header class="navbar">
         <div class="container nav-content">
             <div class="logo">
                 <span class="logo-icon"><i class="fa-solid fa-scale-balanced"></i></span>
-                <span class="logo-text">CROWN SOLICITORS</span>
+                <span class="logo-text">CROWN <span class="logo-light">SOLICITORS</span></span>
             </div>
             <nav class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#about">About Us</a>
                 <a href="#expertise">Expertise</a>
-                <a href="#contact" class="btn btn-outline">Contact Us</a>
+                <a href="#about">The Firm</a>
+                <a href="#contact" class="btn btn-outline">Consultation</a>
             </nav>
             <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
         </div>
@@ -37,74 +37,108 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
         <div class="container hero-content">
-            <h1 class="hero-title">Relentless Defence for Your Assets and Liberty.</h1>
-            <p class="hero-subtitle">High-level legal strategy, agile service, and proven results. Protect what matters most with top-tier solicitors.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Speak to an Expert</a>
-                <a href="#expertise" class="btn btn-secondary">Our Expertise</a>
+            <div class="hero-text-box reveal">
+                <div class="badge">Est. 2005 | London</div>
+                <h1 class="hero-title">Uncompromising Legal Strategy.</h1>
+                <p class="hero-subtitle">Protecting your legacy, your business, and your freedom with absolute discretion and relentless precision.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+                    <a href="#expertise" class="btn btn-text">Discover our services <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Trust Indicators Bar -->
+    <div class="trust-bar reveal">
+        <div class="container trust-content">
+            <div class="trust-item">
+                <i class="fa-solid fa-trophy"></i>
+                <span>Top Tier Legal 500</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-landmark"></i>
+                <span>Regulated by SRA</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <span>£100M+ Recovered</span>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-star"></i>
+                <span>5-Star Client Rating</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Features Section -->
-    <section id="features" class="features">
+    <section id="features" class="features section-padding">
         <div class="container">
+            <div class="section-header reveal">
+                <h2>The Crown Advantage</h2>
+                <div class="divider"></div>
+            </div>
             <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fa-solid fa-bolt feature-icon"></i>
-                    <h3>24/7 AI Triage</h3>
-                    <p>Our intelligent system performs initial case analysis and routes your enquiry to the right specialist instantly.</p>
+                <div class="feature-card glass-card reveal">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>Intelligent Client Intake</h3>
+                    <p>Our proprietary AI technology ensures your enquiry is analysed instantly and routed to the exact specialist you need, 24/7.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-shield-halved feature-icon"></i>
-                    <h3>Absolute Confidentiality</h3>
-                    <p>We treat your sensitive information with the highest degree of legal security and discretion.</p>
+                <div class="feature-card glass-card reveal" style="transition-delay: 0.1s;">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3>Absolute Discretion</h3>
+                    <p>We handle high-profile and sensitive matters with an airtight protocol of confidentiality and security.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fa-solid fa-gavel feature-icon"></i>
-                    <h3>Focused Strategy</h3>
-                    <p>We analyze every detail to build the strongest possible legal framework for your specific case.</p>
+                <div class="feature-card glass-card reveal" style="transition-delay: 0.2s;">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-chess-knight"></i>
+                    </div>
+                    <h3>Tactical Litigation</h3>
+                    <p>We don't just respond to legal threats; we anticipate them, outmaneuver the opposition, and secure your position.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Areas of Practice -->
-    <section id="expertise" class="practice-areas">
+    <section id="expertise" class="practice-areas section-padding">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Expertise</h2>
+            <div class="section-header reveal">
+                <h2>Areas of Expertise</h2>
                 <div class="divider"></div>
-                <p>Specialised precision in the most critical areas of UK Law.</p>
             </div>
             
             <div class="areas-grid">
-                <div class="area-card">
+                <div class="area-card reveal">
                     <div class="area-img" style="background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800');"></div>
                     <div class="area-content">
-                        <h3>Corporate Law</h3>
-                        <p>Comprehensive protection for your business, including compliance, contracts, and restructuring.</p>
-                        <a href="#" class="read-more">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3>Corporate & Commercial</h3>
+                        <p>Mergers, acquisitions, complex commercial disputes, and proactive corporate compliance strategies.</p>
+                        <a href="#" class="read-more">Explore <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="area-card">
+                <div class="area-card reveal" style="transition-delay: 0.1s;">
                     <div class="area-img" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=800');"></div>
                     <div class="area-content">
-                        <h3>Private Client & Family</h3>
-                        <p>Agile resolution of property disputes, wealth management, and divorce proceedings.</p>
-                        <a href="#" class="read-more">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                        <h3>Private Wealth & Family</h3>
+                        <p>High-net-worth divorce, estate planning, and asset protection for individuals and families.</p>
+                        <a href="#" class="read-more">Explore <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="area-card">
+                <div class="area-card reveal" style="transition-delay: 0.2s;">
                     <div class="area-img" style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=800');"></div>
                     <div class="area-content">
                         <h3>Employment Law</h3>
-                        <p>Defending businesses against tribunal claims and providing proactive workplace compliance.</p>
-                        <a href="#" class="read-more">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                        <p>Defending executives and corporations in high-stakes tribunal claims and contractual disputes.</p>
+                        <a href="#" class="read-more">Explore <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -113,41 +147,43 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
+        <div class="container footer-content reveal">
             <div class="footer-brand">
                 <div class="logo">
                     <span class="logo-icon"><i class="fa-solid fa-scale-balanced"></i></span>
-                    <span class="logo-text">CROWN SOLICITORS</span>
+                    <span class="logo-text">CROWN <span class="logo-light">SOLICITORS</span></span>
                 </div>
-                <p class="footer-desc">Legal excellence and cutting-edge service.</p>
+                <p class="footer-desc">Legal excellence combined with cutting-edge technology for the modern world.</p>
             </div>
             <div class="footer-contact">
-                <h4>Contact</h4>
-                <p><i class="fa-solid fa-envelope"></i> contact@crownsolicitors.co.uk</p>
-                <p><i class="fa-solid fa-phone"></i> +44 20 7946 0958</p>
-                <p><i class="fa-solid fa-location-dot"></i> 1 Canada Square, Canary Wharf, London</p>
+                <h4>London Office</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 1 Canada Square, Canary Wharf, London, E14 5AB</p>
+                <p><i class="fa-solid fa-phone"></i> +44 (0) 20 7946 0958</p>
+                <p><i class="fa-solid fa-envelope"></i> legal@crownsolicitors.co.uk</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Crown Solicitors. All rights reserved. Powered by AI Automation Agency.</p>
+            <div class="container">
+                <p>&copy; 2026 Crown Solicitors LLP. All rights reserved. <br><span style="font-size: 0.8rem; opacity: 0.6;">Powered by AI Automation Agency</span></p>
+            </div>
         </div>
     </footer>
 
-    <!-- AI Chat Widget -->
+    <!-- AI Chat Widget (Glassmorphism) -->
     <div id="ai-widget" class="ai-widget">
         <div class="ai-chat-btn" id="ai-toggle">
             <div class="pulse-ring"></div>
             <i class="fa-solid fa-robot"></i>
         </div>
         
-        <div class="ai-chat-window" id="ai-window">
+        <div class="ai-chat-window glass-panel" id="ai-window">
             <div class="ai-header">
                 <div class="ai-avatar">
                     <i class="fa-solid fa-robot"></i>
                 </div>
                 <div class="ai-info">
-                    <h4>AI Legal Assistant</h4>
-                    <span class="ai-status">Online now</span>
+                    <h4>Crown AI Assistant</h4>
+                    <span class="ai-status">Online</span>
                 </div>
                 <button class="ai-close" id="ai-close"><i class="fa-solid fa-xmark"></i></button>
             </div>
@@ -155,18 +191,18 @@
             <div class="ai-messages" id="ai-messages">
                 <div class="message ai-message">
                     <div class="msg-bubble">
-                        Hello! I am the AI Legal Assistant for Crown Solicitors.
+                        Good day. I am the AI Legal Assistant for Crown Solicitors.
                     </div>
                 </div>
                 <div class="message ai-message">
                     <div class="msg-bubble">
-                        To ensure we direct your enquiry to the right solicitor, could you briefly describe what kind of legal assistance you need today?
+                        Our solicitors are currently in court or in meetings. To expedite your enquiry, could you briefly describe the nature of your legal matter?
                     </div>
                 </div>
             </div>
             
             <div class="ai-input-area">
-                <input type="text" id="ai-input" placeholder="Type your message...">
+                <input type="text" id="ai-input" placeholder="Type your message securely...">
                 <button id="ai-send"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>

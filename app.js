@@ -1,14 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // --- Reveal on Scroll Animations ---
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+    
+    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
+    
+    revealElements.forEach(el => {
+        revealOnScroll.observe(el);
+    });
+    
+    // Trigger the hero section immediately
+    setTimeout(() => {
+        document.querySelector('.hero-text-box').classList.add('active');
+    }, 100);
+
     // --- Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.padding = '0.5rem 0';
-            navbar.style.boxShadow = '0 4px 10px rgba(0,0,0,0.3)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.padding = '1rem 0';
-            navbar.style.boxShadow = '0 2px 4px rgba(0,0,0,0.05)';
+            navbar.classList.remove('scrolled');
         }
     });
 
@@ -20,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const aiInput = document.getElementById('ai-input');
     const aiSendBtn = document.getElementById('ai-send');
 
-    // Toggle window
     aiToggleBtn.addEventListener('click', () => {
         aiWindow.classList.toggle('active');
         if(aiWindow.classList.contains('active')) {
@@ -32,22 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
         aiWindow.classList.remove('active');
     });
 
-    // Handle sending message
     const sendMessage = () => {
         const text = aiInput.value.trim();
         if (text === '') return;
 
-        // Add User Message
         appendMessage(text, 'user-message');
         aiInput.value = '';
 
-        // Simulate AI Thinking
         showTypingIndicator();
 
-        // Simulate AI Response (Sales Pitch style)
         setTimeout(() => {
             removeTypingIndicator();
-            const response = "Thank you for the details. I understand you need assistance with this matter. Our legal team will conduct a preliminary review. Could you please provide your full name and phone number so one of our specialist solicitors can contact you directly?";
+            const response = "Thank you for the details. I understand the sensitivity of this matter. Our legal team will conduct a preliminary review in strict confidence. Could you please provide your full name and phone number so one of our specialist solicitors can contact you directly?";
             appendMessage(response, 'ai-message');
         }, 2000);
     };
@@ -70,8 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         msgDiv.appendChild(bubble);
         aiMessagesContainer.appendChild(msgDiv);
-        
-        // Auto scroll to bottom
         aiMessagesContainer.scrollTop = aiMessagesContainer.scrollHeight;
     }
 
